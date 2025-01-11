@@ -7,8 +7,7 @@ import ProductList from '../component/ProductList'
 function Home() {
   return (
     <div className='' >
-     <Hero />
-     <DisplayHero/>
+    
      <ProductList/>
     </div>
   )

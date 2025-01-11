@@ -7,7 +7,7 @@ function Navbar() {
 
   return (
     <div className="mt-3">
-      <div className="max-w-screen-2xl mx-auto flex flex-col sm:flex-row justify-between items-center p-4 sm:px-8">
+      <div className="max-w-screen-xl mx-auto flex flex-col sm:flex-row justify-between items-center p-4 sm:px-8">
         {/* For Small and Medium Screens */}
         <div className="lg:hidden  flex flex-col w-full">
           {/* Hamburger Menu */}

@@ -8,9 +8,10 @@ export const products = [
       imei: '123456789012345',
       condition: 'Used',
       color: 'Black',
-      storage: '128GB',
+      storage: '6/128GB',
       availability: 'In Stock',
       image: 'https://billing.mobixpress.in/uploads/brand/itel.jpg',
+      discount:1000,
     },
     {
       name: 'VIVO ',
@@ -20,9 +21,10 @@ export const products = [
       imei: '987654321012345',
       condition: 'New',
       color: 'Silver',
-      storage: '256GB',
+      storage: '8/256GB',
       availability: 'Out of Stock',
       image: 'https://billing.mobixpress.in/uploads/brand/lava.jpg',
+      discount:1100,
     },
     {
       name: 'REALME ',
@@ -32,9 +34,10 @@ export const products = [
       imei: '192837465091283',
       condition: 'Used',
       color: 'Blue',
-      storage: '64GB',
+      storage: '4/64GB',
       availability: 'In Stock',
       image: 'https://billing.mobixpress.in/uploads/brand/mi.jpg',
+      discount:1000,
     },
     {
       name: 'Samsung ',
@@ -44,9 +47,10 @@ export const products = [
       imei: '456789012345678',
       condition: 'New',
       color: 'White',
-      storage: '128GB',
+      storage: '6/128GB',
       availability: 'In Stock',
       image: 'https://billing.mobixpress.in/uploads/brand/motorola.jpg',
+      discount:1500,
     },
     {
       name: 'OnePlus',
@@ -56,9 +60,10 @@ export const products = [
       imei: '654987123456789',
       condition: 'New',
       color: 'Green',
-      storage: '256GB',
+      storage: '6/256GB',
       availability: 'In Stock',
       image: 'https://billing.mobixpress.in/uploads/brand/poco.jpg',
+      discount:1600,
     },
     {
       name: 'iPhone ',
@@ -68,9 +73,10 @@ export const products = [
       imei: '987654321654987',
       condition: 'New',
       color: 'Space Grey',
-      storage: '128GB',
+      storage: '8/128GB',
       availability: 'In Stock',
       image: 'https://billing.mobixpress.in/uploads/brand/oneplus.jpg',
+      discount:1700,
     },
     {
       name: 'Xiaomi',
@@ -80,9 +86,10 @@ export const products = [
       imei: '456123789098654',
       condition: 'Used',
       color: 'Black',
-      storage: '64GB',
+      storage: '4/64GB',
       availability: 'In Stock',
       image: 'https://billing.mobixpress.in/uploads/brand/oppo.jpg',
+      discount:1800,
     },
     {
       name: 'Oppo',
@@ -92,9 +99,10 @@ export const products = [
       imei: '567123456123789',
       condition: 'Used',
       color: 'Purple',
-      storage: '128GB',
+      storage: '6/128GB',
       availability: 'Out of Stock',
       image: 'https://billing.mobixpress.in/uploads/brand/realme.jpg',
+      discount:1900,
     },
     {
       name: 'Realme',
@@ -104,9 +112,10 @@ export const products = [
       imei: '111223344556677',
       condition: 'New',
       color: 'Blue',
-      storage: '256GB',
+      storage: '6/256GB',
       availability: 'In Stock',
       image: 'https://billing.mobixpress.in/uploads/brand/samsung.jpg',
+      discount:2100,
     },
     {
       name: 'Poco',
@@ -119,6 +128,7 @@ export const products = [
       storage: '128GB',
       availability: 'In Stock',
       image: 'https://billing.mobixpress.in/uploads/brand/tecno.jpg',
+      discount:1000,
     },
     {
       name: 'VIVO ',
@@ -131,6 +141,7 @@ export const products = [
       storage: '128GB',
       availability: 'Out of Stock',
       image: 'https://billing.mobixpress.in/uploads/brand/vivo.jpg',
+      discount:1000,
     },
     {
       name: 'Google ',
@@ -143,6 +154,7 @@ export const products = [
       storage: '128GB',
       availability: 'In Stock',
       image: 'https://billing.mobixpress.in/uploads/brand/ass.jpg',
+      discount:1000,
     },
     {
       name: 'Sony',
@@ -155,6 +167,7 @@ export const products = [
       storage: '128GB',
       availability: 'In Stock',
       image: 'https://billing.mobixpress.in/uploads/brand/iphone.jpg',
+      discount:1000,
     },
     {
       name: 'Huawei',
@@ -167,6 +180,8 @@ export const products = [
       storage: '256GB',
       availability: 'In Stock',
       image: 'https://billing.mobixpress.in/uploads/brand/iphone.jpg',
+      
+
     },
     {
       name: 'Asus',

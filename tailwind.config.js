@@ -22,38 +22,21 @@ export default {
         flowButtonLine: {
           '0%': {
             top: '0',
-            left: '0',
+            left: '-100%',
             width: '100%',
-            height: '2px',
-            transform: 'rotate(0deg)',
-          },
-          '25%': {
-            top: '0',
-            left: '0',
-            width: '2px',
-            height: '100%',
-            transform: 'rotate(90deg)', // Right to left (vertical)
+            height: '4px',
           },
           '50%': {
-            top: '100%',
+            top: '0',
             left: '0',
             width: '100%',
-            height: '2px',
-            transform: 'rotate(180deg)', // Bottom to top (horizontal)
-          },
-          '75%': {
-            top: '0',
-            left: '100%',
-            width: '2px',
-            height: '100%',
-            transform: 'rotate(270deg)', // Left to right (vertical)
+            height: '4px',
           },
           '100%': {
             top: '0',
-            left: '0',
+            left: '100%',
             width: '100%',
-            height: '2px',
-            transform: 'rotate(360deg)', // Complete cycle
+            height: '4px',
           },
         },
       },
