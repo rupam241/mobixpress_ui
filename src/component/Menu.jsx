@@ -10,7 +10,7 @@ function Menu() {
   };
 
   return (
-    <div className="border border-[#ccc] w-full mt-4 md:block hidden">
+    <div className="border border-[#ccc] w-full mt-4 lg:block hidden">
       <div className="px-3 flex flex-col md:flex-row items-center justify-between md:justify-around">
         {/* Menu Links */}
         <div className="space-y-2 md:space-y-0 md:flex items-center md:space-x-4">

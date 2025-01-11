@@ -7,11 +7,11 @@ function Navbar() {
 
   return (
     <div className="mt-3">
-      <div className="max-w-screen-xl mx-auto flex flex-col sm:flex-row justify-between items-center p-4 sm:px-8">
+      <div className="max-w-screen-2xl mx-auto flex flex-col sm:flex-row justify-between items-center p-4 sm:px-8">
         {/* For Small and Medium Screens */}
-        <div className="md:hidden flex flex-col w-full">
+        <div className="lg:hidden  flex flex-col w-full">
           {/* Hamburger Menu */}
-          <div className="flex justify-between items-center w-full">
+          <div className=" px-4 flex justify-between items-center w-full">
             <button
               onClick={() => setMenuOpen(!menuOpen)}
               className="text-2xl text-black"
@@ -50,7 +50,7 @@ function Navbar() {
         </div>
 
         {/* For Large Screens */}
-        <div className="hidden md:flex justify-between items-center w-full">
+        <div className="hidden lg:flex justify-between items-center w-full">
           {/* Logo */}
           <div>
             <img
