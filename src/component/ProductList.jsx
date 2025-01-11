@@ -1,5 +1,6 @@
 import React from "react";
-import { products } from "../item/productData";
+import { productItem } from "../item/productItem";
+import { FaRupeeSign } from "react-icons/fa";
 
 function ProductList() {
   // Function to calculate the discount percentage
@@ -10,12 +11,16 @@ function ProductList() {
   };
 
   return (
-    <div className="md:w-full max-w-screen-2xl mx-auto flex flex-col justify-between items-center rounded-xl pt-2 lg:pt-4 md:px-15 px-10 mt-10">
+    <div className="md:w-full max-w-screen-2xl mx-auto flex flex-col justify-between items-center rounded-xl pt-2 lg:pt-4 lg:px-20 px-10 mt-10">
       {/* Display title */}
       <div className="flex items-center justify-between w-full">
         <div className="flex items-center gap-2 italic">
-          <h1 className="md:text-3xl font-extrabold font-serif text-xl">TRENDING</h1>
-          <span className="md:text-3xl font-extrabold font-serif text-xl">PRODUCT</span>
+          <h1 className="md:text-3xl font-extrabold font-serif text-xl">
+            TRENDING
+          </h1>
+          <span className="md:text-3xl font-extrabold font-serif text-xl">
+            PRODUCT
+          </span>
         </div>
         <div>
           <button className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 hidden lg:flex">
@@ -25,29 +30,38 @@ function ProductList() {
       </div>
 
       {/* Item List */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8 w-full relative">
-        {products.map((item, index) => (
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8 w-full cursor-pointer">
+        {productItem.map((item, index) => (
           <div
             key={index}
-            className="bg-white shadow-md rounded-lg p-4 flex flex-col items-start justify-between"
+            className="bg-white shadow-md rounded-xl p-4 flex flex-col items-start justify-between relative"
           >
-
-            {/* Product Image */}
-            <img
-              src={item.image}
-              alt={item.name}
-              className="w-24 h-32 object-cover rounded-md mb-4"
-            />
+            <div className="absolute top-0 left-0 bg-customRed w-24 px-2 py-1 flex items-center text-sm text-white rounded-e-xl">
+             
+              <span>{item.discount}</span>
+              <span className="ml-1">OFF</span>
+            </div>
+            <div className="flex items-center gap-8">
+              {/* image */}
+              <div>
+                <img
+                  src={item.image}
+                  alt={item.name}
+                  className="w-24 h-32 object-cover rounded-md mt-6"
+                />
+              </div>
+              {/* //other field */}
+              <div className="mb-14  flex flex-col   ">
+                <h2 className="text-lg font-extrabold uppercase">{item.name}</h2>
+                <p className="uppercase ">{item.name}({item.storage}){item.color}</p>
+                <p className="text-gray-600 ">Quality {item.condition}</p>
+                <p className="text-red-500">
+                  {calculateDiscountPercentage(item.price, item.discount)}% OFF
+                </p>
+              </div>
+            </div>
 
             {/* Product Details */}
-            <h2 className="text-lg font-bold">{item.name}</h2>
-            <p className="text-gray-600">{item.price}</p>
-            <p className="text-red-500">{calculateDiscountPercentage(item.price, item.discount)}% OFF</p>
-
-            {/* Add to Cart Button */}
-            <button className="bg-blue-500 text-white px-4 py-2 rounded-md mt-4 hover:bg-blue-600">
-              Add to Cart
-            </button>
           </div>
         ))}
       </div>
