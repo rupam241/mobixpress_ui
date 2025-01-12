@@ -2,6 +2,7 @@ export const productItem = [
   {
     id: 1,
     name: 'REALME 11 PRO 5G',
+    name1: 'REALME',
     price: '₹12,999',
     originalPrice: '₹27,999',
     discount: '₹15,000',
@@ -25,6 +26,7 @@ export const productItem = [
   {
     id: 2,
     name: 'Samsung Galaxy S21',
+    name1: 'Samsung',
     price: '₹29,999/-',
     originalPrice: '₹49,999',
     discount: '₹20,000',
@@ -48,6 +50,8 @@ export const productItem = [
   {
     id: 3,
     name: 'iPhone 14 Pro Max',
+    name1: 'iPhone',
+    
     price: '₹99,999',
     originalPrice: '₹1,29,999',
     discount: '₹30,000',
@@ -71,6 +75,7 @@ export const productItem = [
   {
     id: 4,
     name: 'REALME 11 PRO 5G',
+    name1: 'REALME',
     price: '₹12,999',
     originalPrice: '₹27,999',
     discount: '₹15,000',
@@ -94,6 +99,7 @@ export const productItem = [
   {
     id: 5,
     name: 'OnePlus 9 Pro',
+    name1: 'OnePlus',
     price: '₹36,999',
     originalPrice: '₹54,999',
     discount: '₹18,000',
@@ -117,6 +123,8 @@ export const productItem = [
   {
     id: 6,
     name: 'Xiaomi Mi 11X',
+    name1: 'Xiaomi',
+
     price: '₹19,499',
     originalPrice: '₹34,999',
     discount: '₹15,500',
@@ -140,6 +148,7 @@ export const productItem = [
   {
     id: 7,
     name: 'Oppo Reno 6 Pro',
+    name1: 'Oppo',
     price: '₹23,999/-',
     originalPrice: '₹39,999',
     discount: '₹16,000',
@@ -163,6 +172,7 @@ export const productItem = [
   {
     id: 8,
     name: 'Motorola Edge 40',
+    name1: 'Motorola',
     price: '₹33,999/-',
     originalPrice: '₹46,999',
     discount: '₹13,000',
@@ -186,6 +196,8 @@ export const productItem = [
   {
     id: 9,
     name: 'Redmi Note 12 Pro',
+    name1: 'Redmi',
+    
     price: '₹15,999/-',
     originalPrice: '₹24,999',
     discount: '₹9,000',
@@ -209,6 +221,7 @@ export const productItem = [
   {
     id: 10,
     name: 'Samsung Galaxy A52',
+    name1: 'Samsung',
     price: '₹21,999',
     originalPrice: '₹35,999',
     discount: ' ₹14,000',

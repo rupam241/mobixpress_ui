@@ -1,5 +1,10 @@
-import React, { useState, useEffect } from "react";
-import { productItem } from "../item/productItem";
+import React, { useState, useEffect, Suspense } from "react";
+import { productItem } from "../../item/productItem"
+import { Link } from "react-router-dom";
+
+
+const RotatingDetails = React.lazy(() => import("./RotatingDetails"));
+const RotatingDetailsSkeleton = React.lazy(() => import("./RotatingDetailsSkeleton"));
 
 function DealDay() {
   const [loading, setLoading] = useState(true);
@@ -26,8 +31,6 @@ function DealDay() {
         <img src="https://billing.mobixpress.in/uploads/banner/Picsart_24-12-20_17-30-31-447.jpg" alt="" className="rou" />
       </div>
       
-      
-      
       <div className="flex items-center justify-between w-full overflow-hidden mt-">
         <div className="flex items-center gap-2 italic">
           <h1 className="md:text-3xl font-extrabold font-serif text-xl relative text-customRed">
@@ -39,7 +42,7 @@ function DealDay() {
           </span>
         </div>
 
-        <button className="bg-red-200 py-3 px-4 text-customRed italic text-lg sm:flex hidden relative">
+        <button className="bg-red-200 py-3 px-4 text-customRed italic text-lg md:flex hidden relative">
           Show more
           <span className="absolute bottom-0 left-0 w-full h-1 bg-customRed animate-flow-button-line"></span>
         </button>
@@ -60,13 +63,17 @@ function DealDay() {
                   </div>
                   <div className="flex items-center gap-8">
                     <div className="w-24 h-32 bg-gray-300 rounded-md mt-6"></div>
-                    <RotatingDetailsSkeleton />
+                    {/* Lazy loaded Skeleton */}
+                    <Suspense fallback={<div>Loading...</div>}>
+                      <RotatingDetailsSkeleton />
+                    </Suspense>
                   </div>
                 </div>
               ))
-          : productItem.map((item, key) => (
+          : productItem.map((item, index) => (
+              <Link to={`product-page/${item.id}`} key={index}>
               <div
-                key={key}
+                
                 className="bg-white shadow-md rounded-xl p-4 md:flex md:flex-col overflow-hidden"
               >
                 <div className="w-32 bg-customRed py-2 px-3 rounded-t-2xl text-white animate-border-flow  flex gap-2 items-center">
@@ -84,72 +91,17 @@ function DealDay() {
                       className="w-full h-32 object-cover rounded-md mt-6"
                     />
                   </div>
-                  <RotatingDetails item={item} />
+                  {/* Lazy loaded Details */}
+                  <Suspense fallback={<div>Loading...</div>}>
+                    <RotatingDetails item={item} />
+                  </Suspense>
                 </div>
               </div>
+              </Link>
             ))}
       </div>
     </div>
   );
 }
-
-const RotatingDetails = ({ item }) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isVisible, setIsVisible] = useState(true);
-
-  const details = [
-    `Sales Count: ${item.salesCount}`,
-    `Flat Discount: ${item.discount}`,
-    `Availability: ${item.availability}`,
-  ];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setIsVisible(false);
-
-      setTimeout(() => {
-        setCurrentIndex((prevIndex) => (prevIndex + 1) % details.length);
-        setIsVisible(true);
-      }, 500);
-    }, 3000);
-
-    return () => clearInterval(interval);
-  }, [details.length]);
-
-  return (
-    <div className="flex flex-col mb-3">
-      <h2 className="text-lg font-extrabold uppercase">{item.name}</h2>
-      <p className="uppercase mt-1 text-gray-500">
-        {item.name} ({item.storage}) {item.color}
-      </p>
-      <p className="text-gray-600 mt-1">Quality {item.condition}</p>
-
-      <span
-        className={`text-green-500 text-xs mt-2 font-semibold transition-all duration-700 ease-in-out transform ${
-          isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-        }`}
-      >
-        {details[currentIndex]}
-      </span>
-      <span className="flex items-center gap-5 mt-3">
-        <span className="font-semibold">{item.price}</span>
-        <span className="line-through text-customRed font-semibold">
-          {item.originalPrice}
-        </span>
-      </span>
-    </div>
-  );
-};
-
-const RotatingDetailsSkeleton = () => {
-  return (
-    <div className="flex flex-col mb-3">
-      <div className="w-24 h-6 bg-gray-300 rounded-md mt-2"></div>
-      <div className="w-32 h-4 bg-gray-300 rounded-md mt-2"></div>
-      <div className="w-16 h-4 bg-gray-300 rounded-md mt-2"></div>
-      <div className="w-16 h-6 bg-gray-300 rounded-md mt-4"></div>
-    </div>
-  );
-};
 
 export default DealDay;
