@@ -12,8 +12,6 @@ function Header() {
     <TopBanner/>
     <Navbar/>
     <Menu/>
-    <Hero />
-    <DisplayHero/>
     
     </>
   );

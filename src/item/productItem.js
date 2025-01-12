@@ -1,5 +1,6 @@
 export const productItem = [
   {
+    id: 1,
     name: 'REALME 11 PRO 5G',
     price: '₹12,999',
     originalPrice: '₹27,999',
@@ -13,8 +14,16 @@ export const productItem = [
     availability: 'Only 4 Left',
     image: 'https://billing.mobixpress.in/uploads/model/REALME_11_PRO_5G_(1).jpg',
     salesCount: '31+ Already Sold',
+    images: [
+      "https://mobixpress.in/billing/uploads/model/Untitled_design_-_2024-08-07T184006_968.png",
+      "https://mobixpress.in/billing/uploads/model/Untitled_design_-_2024-08-07T184052_810.png",
+      "https://mobixpress.in/billing/uploads/model/Untitled_design_-_2024-08-07T184135_763.png",
+      "https://mobixpress.in/billing/uploads/model/Untitled_design_-_2024-08-07T183905_857.png",
+      "https://mobixpress.in/billing/uploads/model/Untitled_design_-_2024-08-07T183434_724.png"
+    ]
   },
   {
+    id: 2,
     name: 'Samsung Galaxy S21',
     price: '₹29,999/-',
     originalPrice: '₹49,999',
@@ -28,8 +37,16 @@ export const productItem = [
     availability: 'In Stock',
     image: 'https://billing.mobixpress.in/uploads/model/SAMSUNG_Galaxy_A05e4rtf.jpg',
     salesCount: '45+ Already Sold',
+    images: [
+      "https://mobixpress.in/billing/uploads/model/Untitled_design_-_2024-08-07T184006_968.png",
+      "https://mobixpress.in/billing/uploads/model/Untitled_design_-_2024-08-07T184052_810.png",
+      "https://mobixpress.in/billing/uploads/model/Untitled_design_-_2024-08-07T184135_763.png",
+      "https://mobixpress.in/billing/uploads/model/Untitled_design_-_2024-08-07T183905_857.png",
+      "https://mobixpress.in/billing/uploads/model/Untitled_design_-_2024-08-07T183434_724.png"
+    ]
   },
   {
+    id: 3,
     name: 'iPhone 14 Pro Max',
     price: '₹99,999',
     originalPrice: '₹1,29,999',
@@ -43,8 +60,16 @@ export const productItem = [
     availability: 'Only 2 Left',
     image: 'https://billing.mobixpress.in/uploads/model/OnePlus_Nord_CE3_5Gr4tg.jpg',
     salesCount: '20+ Already Sold',
+    images: [
+      "https://mobixpress.in/billing/uploads/model/Untitled_design_-_2024-08-07T184006_968.png",
+      "https://mobixpress.in/billing/uploads/model/Untitled_design_-_2024-08-07T184052_810.png",
+      "https://mobixpress.in/billing/uploads/model/Untitled_design_-_2024-08-07T184135_763.png",
+      "https://mobixpress.in/billing/uploads/model/Untitled_design_-_2024-08-07T183905_857.png",
+      "https://mobixpress.in/billing/uploads/model/Untitled_design_-_2024-08-07T183434_724.png"
+    ]
   },
   {
+    id: 4,
     name: 'REALME 11 PRO 5G',
     price: '₹12,999',
     originalPrice: '₹27,999',
@@ -58,8 +83,16 @@ export const productItem = [
     availability: 'Only 4 Left',
     image: 'https://billing.mobixpress.in/uploads/model/REALME_11_PRO_5G_(1).jpg',
     salesCount: '31+ Already Sold',
+    images: [
+      "https://mobixpress.in/billing/uploads/model/Untitled_design_-_2024-08-07T184006_968.png",
+      "https://mobixpress.in/billing/uploads/model/Untitled_design_-_2024-08-07T184052_810.png",
+      "https://mobixpress.in/billing/uploads/model/Untitled_design_-_2024-08-07T184135_763.png",
+      "https://mobixpress.in/billing/uploads/model/Untitled_design_-_2024-08-07T183905_857.png",
+      "https://mobixpress.in/billing/uploads/model/Untitled_design_-_2024-08-07T183434_724.png"
+    ]
   },
   {
+    id: 5,
     name: 'OnePlus 9 Pro',
     price: '₹36,999',
     originalPrice: '₹54,999',
@@ -73,8 +106,16 @@ export const productItem = [
     availability: 'Only 3 Left',
     image: 'https://billing.mobixpress.in/uploads/model/OPPO_RENO_10_PRO_5G_GLOSSY_PURPLE.jpg',
     salesCount: '50+ Already Sold',
+    images: [
+      "https://mobixpress.in/billing/uploads/model/Untitled_design_-_2024-08-07T184006_968.png",
+      "https://mobixpress.in/billing/uploads/model/Untitled_design_-_2024-08-07T184052_810.png",
+      "https://mobixpress.in/billing/uploads/model/Untitled_design_-_2024-08-07T184135_763.png",
+      "https://mobixpress.in/billing/uploads/model/Untitled_design_-_2024-08-07T183905_857.png",
+      "https://mobixpress.in/billing/uploads/model/Untitled_design_-_2024-08-07T183434_724.png"
+    ]
   },
   {
+    id: 6,
     name: 'Xiaomi Mi 11X',
     price: '₹19,499',
     originalPrice: '₹34,999',
@@ -88,8 +129,16 @@ export const productItem = [
     availability: 'In Stock',
     image: 'https://billing.mobixpress.in/uploads/model/SAMSUNG_GALAXY_M13_5G_(1).jpg',
     salesCount: '60+ Already Sold',
+    images: [
+      "https://mobixpress.in/billing/uploads/model/Untitled_design_-_2024-08-07T184006_968.png",
+      "https://mobixpress.in/billing/uploads/model/Untitled_design_-_2024-08-07T184052_810.png",
+      "https://mobixpress.in/billing/uploads/model/Untitled_design_-_2024-08-07T184135_763.png",
+      "https://mobixpress.in/billing/uploads/model/Untitled_design_-_2024-08-07T183905_857.png",
+      "https://mobixpress.in/billing/uploads/model/Untitled_design_-_2024-08-07T183434_724.png"
+    ]
   },
   {
+    id: 7,
     name: 'Oppo Reno 6 Pro',
     price: '₹23,999/-',
     originalPrice: '₹39,999',
@@ -103,8 +152,16 @@ export const productItem = [
     availability: 'Only 5 Left',
     image: 'https://billing.mobixpress.in/uploads/model/REALME_12_PLUStg.jpg',
     salesCount: '15+ Already Sold',
+    images: [
+      "https://mobixpress.in/billing/uploads/model/Untitled_design_-_2024-08-07T184006_968.png",
+      "https://mobixpress.in/billing/uploads/model/Untitled_design_-_2024-08-07T184052_810.png",
+      "https://mobixpress.in/billing/uploads/model/Untitled_design_-_2024-08-07T184135_763.png",
+      "https://mobixpress.in/billing/uploads/model/Untitled_design_-_2024-08-07T183905_857.png",
+      "https://mobixpress.in/billing/uploads/model/Untitled_design_-_2024-08-07T183434_724.png"
+    ]
   },
   {
+    id: 8,
     name: 'Motorola Edge 40',
     price: '₹33,999/-',
     originalPrice: '₹46,999',
@@ -118,8 +175,16 @@ export const productItem = [
     availability: 'In Stock',
     image: 'https://billing.mobixpress.in/uploads/model/8973b92bdca6be0ac4d5454af653fdbf.jpg',
     salesCount: '25+ Already Sold',
+    images: [
+      "https://mobixpress.in/billing/uploads/model/Untitled_design_-_2024-08-07T184006_968.png",
+      "https://mobixpress.in/billing/uploads/model/Untitled_design_-_2024-08-07T184052_810.png",
+      "https://mobixpress.in/billing/uploads/model/Untitled_design_-_2024-08-07T184135_763.png",
+      "https://mobixpress.in/billing/uploads/model/Untitled_design_-_2024-08-07T183905_857.png",
+      "https://mobixpress.in/billing/uploads/model/Untitled_design_-_2024-08-07T183434_724.png"
+    ]
   },
   {
+    id: 9,
     name: 'Redmi Note 12 Pro',
     price: '₹15,999/-',
     originalPrice: '₹24,999',
@@ -133,8 +198,16 @@ export const productItem = [
     availability: 'Only 2 Left',
     image: 'https://billing.mobixpress.in/uploads/model/8973b92bdca6be0ac4d5454af653fdbf.jpg',
     salesCount: '33+ Already Sold',
+    images: [
+      "https://mobixpress.in/billing/uploads/model/Untitled_design_-_2024-08-07T184006_968.png",
+      "https://mobixpress.in/billing/uploads/model/Untitled_design_-_2024-08-07T184052_810.png",
+      "https://mobixpress.in/billing/uploads/model/Untitled_design_-_2024-08-07T184135_763.png",
+      "https://mobixpress.in/billing/uploads/model/Untitled_design_-_2024-08-07T183905_857.png",
+      "https://mobixpress.in/billing/uploads/model/Untitled_design_-_2024-08-07T183434_724.png"
+    ]
   },
   {
+    id: 10,
     name: 'Samsung Galaxy A52',
     price: '₹21,999',
     originalPrice: '₹35,999',
@@ -148,5 +221,12 @@ export const productItem = [
     availability: 'In Stock',
     image: 'https://billing.mobixpress.in/uploads/model/VIVO_X70_PRO.jpg',
     salesCount: '40+ Already Sold',
+    images: [
+      "https://mobixpress.in/billing/uploads/model/Untitled_design_-_2024-08-07T184006_968.png",
+      "https://mobixpress.in/billing/uploads/model/Untitled_design_-_2024-08-07T184052_810.png",
+      "https://mobixpress.in/billing/uploads/model/Untitled_design_-_2024-08-07T184135_763.png",
+      "https://mobixpress.in/billing/uploads/model/Untitled_design_-_2024-08-07T183905_857.png",
+      "https://mobixpress.in/billing/uploads/model/Untitled_design_-_2024-08-07T183434_724.png"
+    ]
   },
 ];

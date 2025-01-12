@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { productItem } from "../item/productItem";
+import { Link } from "react-router-dom";
 
 function ProductList() {
   const [loading, setLoading] = useState(true);
@@ -58,30 +59,28 @@ function ProductList() {
                     <div>
                       <div className="w-24 h-32 bg-gray-300 rounded-md mt-6"></div>
                     </div>
-                    
 
                     {/* Rotating Details with Animation */}
                     <RotatingDetailsSkeleton />
                   </div>
                 </div>
               ))
-          : productItem.slice(0,9).map((item, index) => (
-              <div
-                key={index}
-                className="bg-white shadow-md rounded-xl p-4 flex flex-col items-start justify-between relative"
-              >
-                {/* Discount price label */}
-                <div className="flex items-center justify-between w-32 md:w-auto gap-1 bg-customRed py-1 px-3 rounded-t-2xl text-white  animate-border-flow">
-                  <span className="font-semibold">
-                   {item.discount}
-                  </span>
-                  <div className=" items-center">
-                    <span className="text-sm">OFF</span>
+          : productItem.slice(0, 9).map((item, index) => (
+              <Link  to={`product-page/${item.id}`} key={index}>
+                <div
+                  
+                  className="bg-white shadow-md rounded-xl p-4 flex flex-col items-start justify-between relative"
+                >
+                  {/* Discount price label */}
+                  <div className="flex items-center justify-between w-32 md:w-auto gap-1 bg-customRed py-1 px-3 rounded-t-2xl text-white  animate-border-flow">
+                    <span className="font-semibold">{item.discount}</span>
+                    <div className=" items-center">
+                      <span className="text-sm">OFF</span>
+                    </div>
                   </div>
-                </div>
 
-                {/* discount percentage level */}
-                {/* <div className="flex items-center justify-between w-full md:w-auto gap-1 bg-customRed py-1 px-3 rounded-t-2xl text-white  ">
+                  {/* discount percentage level */}
+                  {/* <div className="flex items-center justify-between w-full md:w-auto gap-1 bg-customRed py-1 px-3 rounded-t-2xl text-white  ">
                   <span className="font-semibold">
                    {item.discount}
                   </span>
@@ -90,21 +89,22 @@ function ProductList() {
                   </div>
                 </div> */}
 
-                {/* Product image and other details */}
-                <div className="flex items-center gap-8">
-                  {/* Image */}
-                  <div className="w-18 md:w-24 lg:w-32">
-                    <img
-                      src={item.image}
-                      alt={item.name}
-                      className="w-full h-32 object-cover rounded-md mt-6"
-                    />
-                  </div>
+                  {/* Product image and other details */}
+                  <div className="flex items-center gap-8">
+                    {/* Image */}
+                    <div className="w-18 md:w-24 lg:w-32">
+                      <img
+                        src={item.image}
+                        alt={item.name}
+                        className="w-full h-32 object-cover rounded-md mt-6"
+                      />
+                    </div>
 
-                  {/* Rotating Details */}
-                  <RotatingDetails item={item} />
+                    {/* Rotating Details */}
+                    <RotatingDetails item={item} />
+                  </div>
                 </div>
-              </div>
+              </Link>
             ))}
       </div>
     </div>
