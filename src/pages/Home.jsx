@@ -1,14 +1,19 @@
 import React from 'react'
 
 import Hero from '../component/Hero'
-import DisplayHero from '../component/DisplayHero'
-import ProductList from '../component/ProductList'
+import ProductList from '../component/TrendingProductList'
+import DealDay from '../component/DealDay'
+import HotDeal from '../component/HotDeal'
+import Recommend from '../component/Recommended'
 
 function Home() {
   return (
-    <div className='' >
+    <div className='overflow-x-hidden' >
     
      <ProductList/>
+     <DealDay/>
+     <HotDeal/>
+     <Recommend/>
     </div>
   )
 }
