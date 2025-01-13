@@ -15,8 +15,17 @@ module.exports = {
         "border-flow": "borderFlow 4s linear infinite",
         "zoom-fade": "zoomFade 1s ease-out",
         "fade-in-out": "fadeInOut 5s ease-in-out infinite",
+        "colorChange": 'colorChange 5s infinite',
       },
       keyframes: {
+        
+        colorChange: {
+          '0%': { color: '#f43f5e' },  // Pink
+          '25%': { color: '#f59e0b' }, // Yellow
+          '50%': { color: '#10b981' }, // Green
+          '75%': { color: '#3b82f6' }, // Blue
+          '100%': { color: '#f43f5e' }, // Pink
+        },
         fadeInOut: {
           "0%": {
             opacity: 0, // Starts with the container invisible
