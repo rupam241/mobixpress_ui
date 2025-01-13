@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { productItem } from "../item/productItem";
+import {productItem} from "../../item/productItem"
 import { Link } from "react-router-dom";
 
 function ProductList() {
@@ -35,7 +35,7 @@ function ProductList() {
           </span>
         </div>
 
-        <button className="relative bg-red-200 py-3 px-4 text-customRed italic text-lg">
+        <button className="relative bg-red-200 py-3 px-4 text-customRed italic text-lg hidden md:flex">
           Show more
           <span className="absolute bottom-0 left-0 w-full h-1 bg-customRed animate-flow-button-line"></span>
         </button>
