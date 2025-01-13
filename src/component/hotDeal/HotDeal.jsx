@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef, Suspense } from "react";
-import {productItem} from "../../item/productItem"
+import { productItem } from "../../item/productItem";
 import { Link } from "react-router-dom";
 
 const RotatingDetails = React.lazy(() => import("./RotatingDetails"));
@@ -50,12 +50,12 @@ function HotDeal() {
   };
 
   return (
-    <div className="w-full max-w-screen-2xl mx-auto py-4 lg:px-20 px-6  mt-2 md:mt-8 overflow-hidden">
+    <div className="w-full max-w-screen-2xl mx-auto py-4 lg:px-20 px-6 mt-2 md:mt-8 overflow-hidden">
       <div>
         <img
           src="https://billing.mobixpress.in/uploads/banner/Picsart_24-12-20_20-13-52-299.jpg"
-          alt=""
-          className=" md:mb-8 mb-4 "
+          alt="Hot Deal Banner"
+          className="w-full object-cover md:mb-8 mb-4"
         />
       </div>
       <div className="flex justify-between items-center w-full md:mt-8 mt-4">
@@ -75,7 +75,6 @@ function HotDeal() {
         >
           Show more
           <span className="absolute bottom-0 left-0 w-full h-1 bg-customRed animate-line-flow"></span>
-          {/* New hover animation effects */}
           <span className="absolute inset-0 border-2 border-transparent hover:border-customRed transition-all duration-500"></span>
         </button>
       </div>
@@ -113,38 +112,33 @@ function HotDeal() {
                   </div>
                 </div>
               ))
-          : productItem.map((item,index) => (
-         <Link to={`product-page/${item.id}`} key={index}>
-         <div
-               
-                className="bg-white shadow-lg rounded-xl p-6 w-96 sm:w-112 md:w-1/2 lg:w-1/3 flex items-center relative"
-              >
-                {/* holding container */}
-                <div className="flex flex-col items-center gap-3 mt-6">
-                  {/* image */}
-                  <div>
-                    <img
-                      src={item.image}
-                      alt={item.name}
-                      className="w-48 h-36 object-cover rounded-md"
-                    />
-                  </div>
+          : productItem.map((item, index) => (
+              <Link to={`product-page/${item.id}`} key={index}>
+                <div className="bg-white shadow-lg rounded-xl p-6 w-full flex items-center relative">
+                  {/* holding container */}
+                  <div className="flex flex-col items-center gap-3 mt-6">
+                    {/* image */}
+                    <div>
+                      <img
+                        src={item.image}
+                        alt={item.name}
+                        className="w-48 h-36 object-cover rounded-md"
+                      />
+                    </div>
 
-                  {/* DISCOUNT */}
-                  <div className="w-32 md:w-28 bg-customRed py-2 px-3 rounded-t-2xl text-white animate-border-flow absolute top-0 left-0">
-                    <span>{item.discount}</span>
-                    <span>OFF</span>
-                  </div>
+                    {/* DISCOUNT */}
+                    <div className="w-32 md:w-28 bg-customRed py-2 px-3 rounded-t-2xl text-white animate-border-flow absolute top-0 left-0">
+                      <span>{item.discount}</span>
+                      <span>OFF</span>
+                    </div>
 
-                  {/* Rotating Details */}
-                  <Suspense fallback={<RotatingDetailsSkeleton />}>
-                    <RotatingDetails item={item} />
-                  </Suspense>
+                    {/* Rotating Details */}
+                    <Suspense fallback={<RotatingDetailsSkeleton />}>
+                      <RotatingDetails item={item} />
+                    </Suspense>
+                  </div>
                 </div>
-              </div>
-         
-         </Link>
-              
+              </Link>
             ))}
       </div>
     </div>

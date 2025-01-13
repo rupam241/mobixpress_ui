@@ -4,7 +4,7 @@ const RotatingDetails = React.memo(({ item }) => {
     const [isVisible, setIsVisible] = useState(true);
   
     const details = [
-      `Sales Count: ${item.salesCount}`,
+      ` ${item.salesCount}`,
       `Flat Discount: ${item.discount}`,
       `Availability: ${item.availability}`,
     ];
