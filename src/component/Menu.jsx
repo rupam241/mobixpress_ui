@@ -19,7 +19,7 @@ function Menu() {
             className={`relative group cursor-pointer py-2 px-4 transition-all duration-500 ease-out transform
               ${activeIndex === 0 ? "scale-105 shadow-lg shadow-customRed" : ""}`}
             style={{
-              backgroundColor: activeIndex === 0 ? "#f8d7da" : "transparent", // Light pink background for active item
+              backgroundColor: activeIndex === 0 ? "#f8d7da" : "transparent", 
             }}
           >
             <Link

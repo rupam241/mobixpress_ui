@@ -49,13 +49,13 @@ function Hero() {
       {loading ? (
         <HeroSkeleton />
       ) : (
-        <div className="max-w-screen-2xl mx-auto flex flex-col sm:flex-row sm:gap-4 justify-between items-center rounded-xl pt-2 lg:pt-4 px-20 ">
+        <div className="max-w-screen-2xl mx-auto flex flex-col sm:flex-row sm:gap-4 justify-between items-center rounded-xl  lg:pt-4 px-20 ">
           {/* First Image Container with Lazy Loading */}
           <div className="h-full">
             <img
               src={bannerData[currentBanner]}
               alt={`Banner ${currentBanner + 1}`}
-              loading="lazy" // Lazy Loading Implemented Here
+              loading="lazy"
               className="w-full h-1/4 object-cover rounded-xl"
             />
           </div>

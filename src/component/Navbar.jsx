@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { CiSearch, CiUser, CiShoppingCart } from "react-icons/ci";
-import { FaBars } from "react-icons/fa"; // Hamburger icon
+import { FaBars } from "react-icons/fa"; 
+import { Link } from "react-router-dom";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false); // State to manage hamburger menu toggle
@@ -33,32 +34,33 @@ function Navbar() {
             </div>
           </div>
 
-            <div className="relative flex items-center gap-4 bg-white rounded-full px-4 py-2 w-full mt-4">
-              <img
-                src="https://www.mobixpress.in/assets/cat.png"
-                alt="Category Icon"
-                className="h-6 w-6"
-              />
-              <input
-                type="text"
-                placeholder="Search..."
-                className="w-full bg-transparent text-black outline-none placeholder-gray-500 border-2 border-slate-200 px-4 py-3 rounded-full"
-              />
-              <CiSearch className="absolute right-6 rounded-full text-slate-100 cursor-pointer bg-customRed w-10 h-10 p-1" />
-            </div>
-       
+          <div className="relative flex items-center gap-4 bg-white rounded-full px-4 py-2 w-full mt-4">
+            <img
+              src="https://www.mobixpress.in/assets/cat.png"
+              alt="Category Icon"
+              className="h-6 w-6"
+            />
+            <input
+              type="text"
+              placeholder="Search..."
+              className="w-full bg-transparent text-black outline-none placeholder-gray-500 border-2 border-slate-200 px-4 py-3 rounded-full"
+            />
+            <CiSearch className="absolute right-6 rounded-full text-slate-100 cursor-pointer bg-customRed w-10 h-10 p-1" />
+          </div>
         </div>
 
         {/* For Large Screens */}
         <div className="hidden lg:flex justify-between items-center w-full">
           {/* Logo */}
-          <div>
-            <img
-              src="https://www.mobixpress.in/assets/logo1.png"
-              alt="MobiXpress Logo"
-              className="h-18 w-52"
-            />
-          </div>
+          <Link to={""}>
+            <div>
+              <img
+                src="https://www.mobixpress.in/assets/logo1.png"
+                alt="MobiXpress Logo"
+                className="h-18 w-52"
+              />
+            </div>
+          </Link>
 
           {/* Search Bar */}
           <div className="relative flex items-center gap-4 bg-white rounded-full px-4 py-2 w-2/3 sm:w-1/2">
