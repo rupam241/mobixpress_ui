@@ -50,15 +50,15 @@ function HotDeal() {
   };
 
   return (
-    <div className="w-full max-w-screen-2xl mx-auto py-4 lg:px-20 px-6 mt-10 overflow-hidden">
+    <div className="w-full max-w-screen-2xl mx-auto py-4 lg:px-20 px-6  mt-2 md:mt-8 overflow-hidden">
       <div>
         <img
           src="https://billing.mobixpress.in/uploads/banner/Picsart_24-12-20_20-13-52-299.jpg"
           alt=""
-          className="mb-12"
+          className=" md:mb-8 mb-4 "
         />
       </div>
-      <div className="flex justify-between items-center w-full mb-6">
+      <div className="flex justify-between items-center w-full md:mt-8 mt-4">
         <div className="flex items-center gap-2 italic">
           <h1 className="text-xl md:text-3xl font-extrabold font-serif text-customRed relative">
             HOT
@@ -67,8 +67,16 @@ function HotDeal() {
           <span className="text-xl md:text-3xl font-extrabold font-serif">DEAL</span>
         </div>
 
-        <button className="bg-red-200 py-2 px-4 text-customRed italic text-lg hidden lg:flex">
+        <button
+          className="relative bg-red-200 py-3 px-4 text-customRed italic text-lg hidden md:flex 
+          overflow-hidden 
+          hover:text-black
+          hover:scale-105 transition-all ease-in-out duration-300"
+        >
           Show more
+          <span className="absolute bottom-0 left-0 w-full h-1 bg-customRed animate-line-flow"></span>
+          {/* New hover animation effects */}
+          <span className="absolute inset-0 border-2 border-transparent hover:border-customRed transition-all duration-500"></span>
         </button>
       </div>
 

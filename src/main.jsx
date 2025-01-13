@@ -5,7 +5,7 @@ import App from "./App.jsx";
 import { createBrowserRouter, RouterProvider, createRoutesFromElements, Route } from 'react-router-dom';
 import Layout from "./Layout.jsx";
 import Home from "./pages/Home.jsx";
-import Product from "./pages/Product.jsx";
+import Product from "./pages/Product/Product.jsx"
 
 
 

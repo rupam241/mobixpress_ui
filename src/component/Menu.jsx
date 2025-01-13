@@ -23,7 +23,7 @@ function Menu() {
             }}
           >
             <Link
-              to="/"
+              to=""
               className="text-lg relative group hover:text-customRed transition-colors duration-300"
             >
               Home

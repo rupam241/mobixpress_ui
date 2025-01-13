@@ -17,12 +17,12 @@ function ProductList() {
   }, []);
 
   return (
-    <div className="md:w-full max-w-screen-2xl mx-auto flex flex-col justify-between items-center rounded-xl pt-2 lg:pt-4 lg:px-20 px-10 mt-10">
+    <div className="md:w-full max-w-screen-2xl mx-auto flex flex-col justify-between items-center rounded-xl pt-2 lg:pt-4 lg:px-20 px-10 md:mt-8 mt-2 ">
       <div className="flex items-center justify-between w-full">
         <div className="flex items-center gap-2 italic">
           <h1 className="md:text-3xl font-extrabold font-serif text-xl relative text-customRed">
             TRENDING
-            <span className="absolute bottom-0 left-0 h-1 bg-customRed animate-border-line"></span>
+            <span className="absolute bottom-0 left-0 h-1 bg-customRed animate-flow-line"></span>
           </h1>
           <span className="md:text-3xl font-extrabold font-serif text-xl">
             PRODUCT
@@ -31,17 +31,19 @@ function ProductList() {
 
         <button
           className="relative bg-red-200 py-3 px-4 text-customRed italic text-lg hidden md:flex 
-                  overflow-hidden 
-                  hover:text-white"
+          overflow-hidden 
+          hover:text-black
+          hover:scale-105 transition-all ease-in-out duration-300"
         >
           Show more
-          <span className="absolute bottom-0 left-0 w-full h-1 bg-customRed animate-line-flow"></span>{" "}
-          {/* Border animation */}
+          <span className="absolute bottom-0 left-0 w-full h-1 bg-customRed animate-line-flow"></span>
+          {/* New hover animation effects */}
+          <span className="absolute inset-0 border-2 border-transparent hover:border-customRed transition-all duration-500"></span>
         </button>
       </div>
 
       {/* Item List */}
-      <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8 w-full cursor-pointer">
+      <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:mt-8 mt-2 w-full cursor-pointer">
         {loading
           ? Array(10)
               .fill(0)
@@ -70,9 +72,9 @@ function ProductList() {
               <Link to={`product-page/${item.id}`} key={index}>
                 <div className="bg-white shadow-md rounded-xl p-4 flex flex-col items-start justify-between relative">
                   {/* Discount price label */}
-                  <div className="  flex items-center justify-between w-32 md:w-auto gap-1 bg-customRed py-1 px-3 rounded-t-2xl text-white animate-zoom-fade">
+                  <div className="flex items-center justify-between w-32 md:w-auto gap-1 bg-customRed py-1 px-3 rounded-t-2xl text-white animate-fade-in-out">
                     <span className="font-semibold">{item.discount}</span>
-                    <div className=" items-center">
+                    <div className="items-center">
                       <span className="text-sm">OFF</span>
                     </div>
                   </div>

@@ -94,12 +94,12 @@ function PageBelow() {
       };
     
   return (
-    <div className="md:w-full max-w-screen-2xl mx-auto flex flex-col justify-between items-center rounded-xl pt-2 lg:pt-4 lg:px-20 px-10 mt-10">
+    <div className="md:w-full max-w-screen-2xl mx-auto flex flex-col justify-between items-center rounded-xl pt-2 lg:pt-4 lg:px-20 px-10 md:mt-10 mt-8 ">
     <h1 className="uppercase md:font-bold text-4xl font-semibold text-center">
       Welcome to MobiXpress # Leading Seller in Second Hand <br />
       <span className="text-center mt-2">Smartphones</span>
     </h1>
-    <p className="mt-4 text-center">
+    <p className="md:mt-4 mt-3 text-center">
       MobiXpress, known as Second Hand smartphone expert and leading
       industry from last 5 years, focused on delivering quality products at
       most affordable prices along with continued customer support services.
@@ -109,7 +109,7 @@ function PageBelow() {
       ever.
     </p>
 
-    <div className="mt-20">
+    <div className="md:mt-20 mt-10">
       <img
         src="https://www.mobixpress.in/assets/Box_Image.webp"
         alt="Product box"
@@ -117,8 +117,8 @@ function PageBelow() {
       />
     </div>
 
-    <div className="mt-10 w-full">
-      <h3 className="text-xl font-semibold text-center mb-4">
+    <div className="md:mt-8 mt-6 w-full">
+      <h3 className="text-xl font-semibold text-center ">
         Price Ranges
       </h3>
       <div
@@ -137,7 +137,7 @@ function PageBelow() {
         {priceRanges.map((range, index) => (
           <div
             key={index}
-            className="flex-shrink-0 bg-gray-100 p-4 rounded-lg shadow-md"
+            className="flex-shrink-0 bg-gray-100 p-4 rounded-lg shadow-md mt-4 md:mt-6"
             style={{ minWidth: "200px" }}
           >
             <span className="text-lg font-medium">
@@ -148,7 +148,7 @@ function PageBelow() {
       </div>
     </div>
 
-    <div className="flex items-center justify-between w-full overflow-hidden mt-10">
+    <div className="flex items-center justify-between w-full overflow-hidden md:mt-8 mt-4">
       <div className="flex items-center gap-2 italic">
         <h1 className="md:text-3xl font-extrabold font-serif text-xl relative text-customRed">
           OUR
@@ -159,14 +159,21 @@ function PageBelow() {
         </span>
       </div>
 
-      <button className="bg-red-200 py-3 px-4 text-customRed italic text-lg sm:flex hidden relative ">
-        Show more
-        <span className="absolute bottom-0 left-0 w-full h-1 bg-customRed animate-flow-button-line"></span>
-      </button>
+      <button
+          className="relative bg-red-200 py-3 px-4 text-customRed italic text-lg hidden md:flex 
+          overflow-hidden 
+          hover:text-black
+          hover:scale-105 transition-all ease-in-out duration-300"
+        >
+          Show more
+          <span className="absolute bottom-0 left-0 w-full h-1 bg-customRed animate-line-flow"></span>
+          {/* New hover animation effects */}
+          <span className="absolute inset-0 border-2 border-transparent hover:border-customRed transition-all duration-500"></span>
+        </button>
     </div>
 
     {/* Branch details with scrolling */}
-    <div className="mt-8 w-full mb-24">
+    <div className="md:mt-8 mt-2 w-full mb-24">
       <div
         className="flex gap-6 overflow-x-auto p-4 scrollbar-hide"
         style={{
